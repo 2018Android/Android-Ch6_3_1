@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         num1 = (int) (Math.random()*12)+1; //亂數值為0~12，+1後變為1~13
         num2 = (int) (Math.random()*12)+1; //亂數值為0~12，+1後變為1~13
         //註冊 Button 的傾聽者物件
-        Button btn1 = (Button) findViewById(R.id.btn1); //找到button的id為btn1
+        Button btn1 = (Button) findViewById(R.id.btn1); //找到button的id為btn1，findViewById()方法的傳回值是View物件，所以需要型別強制轉換成button元件
         btn1.setOnClickListener(btn1Listener); //使用動態綁定OnClick：setOnClickListner()方法指定btn1的lisetener物件
         Button btn2 = (Button) findViewById(R.id.btn2); //找到button的id為btn2
         btn2.setOnClickListener(btn2listener); //使用動態綁定OnClick：setOnClickListner()方法指定btn1的lisetener物件
