@@ -2,7 +2,9 @@ package com.example.mlr.ch6_3_1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,4 +22,19 @@ public class MainActivity extends AppCompatActivity {
         Button btn2 = (Button) findViewById(R.id.btn2); //找到button的id為btn2
         btn2.setOnClickListener(btn2listener); //使用動態綁定OnClick：setOnClickListner()方法指定btn1的lisetener物件
     }
+
+    //btn1的傾聽者物件
+    View.OnClickListener btn1Listener = new View.OnClickListener() { // 由 View.OnClickListener(類別)建立 btn1listener(物件)，類別名稱 物件名稱 = new 類別名稱
+        @Override
+        public void onClick(View v) { //宣告onClick方法
+            Toast.makeText(MainActivity.this,Integer.toString(num1),Toast.LENGTH_SHORT).show(); //當監聽到OnClick方法時，會顯示彈跳訊息框
+        }
+    };
+    //btn2的傾聽者物件
+    View.OnClickListener btn2listener = new View.OnClickListener() { // 由 View.OnClickListener(類別)建立 btn2listener(物件)
+        @Override
+        public void onClick(View v) { //宣告onClick方法
+            Toast.makeText(MainActivity.this,Integer.toString(num2),Toast.LENGTH_SHORT).show(); //當監聽到onClick方法時，會顯示彈跳訊息框
+        }
+    };
 }
