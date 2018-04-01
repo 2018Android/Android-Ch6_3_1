@@ -10,5 +10,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //使用亂數取得點數
+        num1 = (int) (Math.random()*12)+1; //亂數值為0~12，+1後變為1~13
+        num2 = (int) (Math.random()*12)+1; //亂數值為0~12，+1後變為1~13
     }
 }
